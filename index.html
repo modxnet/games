@@ -3,1233 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steal A Brainrot</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Redirecting to MODXNET...</title>
+    <link rel="icon" href="https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png" type="image/x-icon">
     <style>
-        :root {
-            --primary: #00D084; /* green */
-            --secondary: #00B8FF; /* sky blue */
-            --accent: #007BFF; /* blue */
-            --dark: #0e1624;
-            --darker: #0b1220;
-            --light: #ffffff;
-            --lighter: #eef2ff; /* very light indigo/blue */
-            --white: #ffffff;
-            --text: #1f2937; /* slate-800 */
-            --text-secondary: #6b7280; /* slate-500 */
-            --success: #4CAF50;
-            --warning: #FFC107;
-            --danger: #F44336;
-            --brainrot-bg: #eaf4ff;
-            --og-color: #ffb020; /* friendly orange */
-            --secret-color: #8a2be2; /* purple badge */
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(90deg, #00D084, #00B8FF, #007BFF);
-            color: var(--text);
-            min-height: 100vh;
-            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-        }
-        
-        /* iOS Popup Styles */
-        #ios-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-        }
-        
-        .popup-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-        }
-        
-        .popup {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--light);
-            border-radius: 15px;
+            background: linear-gradient(rgba(240, 240, 240, 0.9), rgba(224, 224, 224, 0.9)), 
+                        url('https://i.postimg.cc/J7j2VD2C/Screenshot-20250917-194645-Chrome.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
             padding: 20px;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--lighter);
-        }
-        
-        .gif-container {
-            margin-bottom: 15px;
-        }
-        
-        .instruction-gif {
-            width: 100%;
-            border-radius: 10px;
-        }
-        
-        .instruction-text {
-            color: var(--text);
-            font-size: 16px;
-            line-height: 1.4;
-        }
-        
-        /* Blocky Background */
-        .blocky-bg {
-            background: rgba(255, 255, 255, 0.9);
-            border: 4px solid #ffffff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* Rainbow Banner */
-        .rainbow-banner {
-            padding: 10px 20px;
-            border-radius: 15px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .rainbow-banner-text {
-            font-family: 'Fredoka One', cursive;
-            font-size: 24px;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 15px;
-            background: linear-gradient(90deg, #00D084, #00B8FF, #007BFF);
-            background-size: 400% 400%;
-            animation: rainbow-banner-anim 6s linear infinite;
-            color: #FFFFFF;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.35);
-            opacity: 1;
-        }
-        
-        @keyframes rainbow-banner-anim {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Search Bar Styles */
-        .search-container {
-            position: relative;
-            margin-bottom: 25px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 15px 50px 15px 20px;
-            border-radius: 50px;
-            border: 2px solid #cfe2ff;
-            background: #ffffff;
-            color: var(--text);
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 24px rgba(2, 8, 23, 0.06);
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: #9ec5ff;
-            box-shadow: 0 8px 28px rgba(59, 130, 246, 0.25);
-        }
-        
-        .search-input::placeholder {
-            color: var(--text-secondary);
-        }
-        
-        .search-icon {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-secondary);
-            width: 20px;
-            height: 20px;
-            pointer-events: none;
-        }
-        
-        .search-results-count {
-            text-align: center;
-            margin-bottom: 15px;
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 30px;
-            color: var(--text-secondary);
-            font-size: 18px;
-        }
-        
-        /* Grid Container */
-        .grid-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        /* Pet Row */
-        .pet-row {
-            background: #ffffff;
-            border: 3px solid #d7ecff;
-            border-radius: 18px;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-        
-        .pet-row:hover {
-            background: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(63, 114, 175, 0.18);
-            border-color: #c7e5ff;
-        }
-        
-        /* OG and Secret labels */
-        .bar-title-og, .bar-title-secret {
-            position: absolute;
-            top: -12px;
-            left: 15px;
-            padding: 6px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            z-index: 1;
-            border: 3px solid #ffffff;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-        }
-        
-        .bar-title-og {
-            background-color: var(--og-color);
-            color: #000;
-        }
-        
-        .bar-title-secret {
-            background-color: var(--secret-color);
-            color: #fff;
-        }
-        
-        /* Pet Left Content */
-        .pet-left-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex: 1;
-        }
-        
-        .pet-img-bg {
-            width: 80px;
-            height: 80px;
-            background: #eef7ff;
-            border: 2px solid #cfe6ff;
-            border-radius: 14px;
-            box-shadow: inset 0 0 0 2px #ffffff;
-        }
-        
-        .pet-title-container {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .pet-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1f2d3d;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
-        }
-        
-        .item-title-glow {
-            text-shadow: none;
-        }
-        
-        /* Claim Pill */
-        .claim-pill {
-            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
-            background-size: 400% 400%;
-            color: #ffffff;
-            border: 0;
-            border-radius: 9999px;
-            padding: 12px 28px;
-            font-size: 16px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 
-                0 0 20px rgba(0, 208, 132, 0.6),
-                0 0 40px rgba(0, 184, 255, 0.4),
-                0 0 60px rgba(0, 123, 255, 0.3),
-                0 8px 18px rgba(0,0,0,0.2);
-            min-width: 120px;
-            height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
-            animation: websiteGlow 3s ease-in-out infinite;
-            text-shadow: 
-                2px 2px 0 #000,
-                -2px -2px 0 #000,
-                2px -2px 0 #000,
-                -2px 2px 0 #000,
-                0 0 10px rgba(255, 255, 255, 0.8);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .claim-pill::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            animation: shimmer 2s infinite;
-        }
-        
-        .claim-pill:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 
-                0 0 30px rgba(0, 208, 132, 0.8),
-                0 0 50px rgba(0, 184, 255, 0.6),
-                0 0 70px rgba(0, 123, 255, 0.5),
-                0 0 90px rgba(0, 208, 132, 0.4),
-                0 15px 30px rgba(0,0,0,0.3);
-            animation-duration: 1.5s;
-        }
-        
-        @keyframes websiteGlow {
-            0% { 
-                background-position: 0% 50%;
-                box-shadow: 
-                    0 0 20px rgba(0, 208, 132, 0.6),
-                    0 0 40px rgba(0, 184, 255, 0.4),
-                    0 0 60px rgba(0, 123, 255, 0.3),
-                    0 8px 18px rgba(0,0,0,0.2);
-            }
-            33% { 
-                background-position: 50% 50%;
-                box-shadow: 
-                    0 0 25px rgba(0, 184, 255, 0.7),
-                    0 0 45px rgba(0, 123, 255, 0.5),
-                    0 0 65px rgba(0, 208, 132, 0.4),
-                    0 8px 18px rgba(0,0,0,0.2);
-            }
-            66% { 
-                background-position: 100% 50%;
-                box-shadow: 
-                    0 0 25px rgba(0, 123, 255, 0.7),
-                    0 0 45px rgba(0, 208, 132, 0.5),
-                    0 0 65px rgba(0, 184, 255, 0.4),
-                    0 8px 18px rgba(0,0,0,0.2);
-            }
-            100% { 
-                background-position: 0% 50%;
-                box-shadow: 
-                    0 0 20px rgba(0, 208, 132, 0.6),
-                    0 0 40px rgba(0, 184, 255, 0.4),
-                    0 0 60px rgba(0, 123, 255, 0.3),
-                    0 8px 18px rgba(0,0,0,0.2);
-            }
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        /* Username Modal */
-        .username-modal-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .username-modal {
-            background: var(--light);
-            border-radius: 15px;
-            padding: 20px;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--lighter);
-            position: relative;
-        }
-        
-        .username-modal-close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 24px;
-            cursor: pointer;
-        }
-        
-        .username-modal-title {
-            color: var(--primary);
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-family: 'Fredoka One', cursive;
-        }
-        
-        .username-modal-sub {
-            color: var(--text);
-            margin-bottom: 15px;
-        }
-        
-        .username-modal-input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid var(--lighter);
-            background: var(--darker);
-            color: #ffffff;
-            font-size: 16px;
-            margin-bottom: 10px;
             box-sizing: border-box;
         }
-        
-        .username-modal-error {
-            color: var(--danger);
-            margin-bottom: 15px;
-            min-height: 20px;
+
+        #logo {
+            width: 300px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-        
-        .username-modal-btn {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--darker);
-            border: none;
-            border-radius: 8px;
-            padding: 12px 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-        }
-        
-        /* Generator Modal */
-        #generator-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-content {
-            background: var(--light);
-            border-radius: 15px;
-            padding: 20px;
-            width: 90%;
-            max-width: 400px;
+
+        .redirect-text {
+            font-size: 22px;
+            color: #2c3e50;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--lighter);
-        }
-        
-        .pulse-title {
-            animation: pulse 2s infinite;
-            white-space: pre-line;
-        }
-        
-        .orange-title {
-            color: #ff6b35;
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        
-        .countdown-timer {
-            color: #ff6b35;
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 0.8; }
-            50% { opacity: 1; }
-            100% { opacity: 0.8; }
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 20px;
-            background: var(--darker);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid var(--lighter);
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            width: 0%;
-            transition: width 0.5s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--darker);
-            font-weight: bold;
-            font-size: 12px;
-        }
-        
-        .green-claim-button {
-            background: #00ffCC;
-            color: #000000;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 40px;
-            padding: 12px 28px;
-            font-size: 14px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 6px 20px rgba(0, 255, 204, 0.4), 0 3px 10px rgba(0, 255, 204, 0.3), 0 0 25px rgba(0, 255, 204, 0.2);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
-        }
-        
-        .green-claim-button:hover {
-            background: #00e6b8;
-            color: #000000;
-            transform: translateY(-3px) scale(1.08);
-            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.5), 0 5px 15px rgba(0, 255, 204, 0.4), 0 0 40px rgba(0, 255, 204, 0.3);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-        
-        /* Floating items */
-        #floating-items-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .floating-item {
-            position: absolute;
-            opacity: 0.1;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-        
-        @keyframes float1 {
-            0% { transform: translate(-100px, 110vh) rotate(0deg); }
-            100% { transform: translate(110vw, -100px) rotate(720deg); }
-        }
-        
-        @keyframes float2 {
-            0% { transform: translate(110vw, 110vh) rotate(0deg); }
-            100% { transform: translate(-100px, -100px) rotate(-720deg); }
-        }
-        
-        @keyframes float3 {
-            0% { transform: translate(50vw, 110vh) rotate(0deg); }
-            100% { transform: translate(50vw, -100px) rotate(360deg); }
-        }
-        
-        /* Claiming Live Feature */
-        .claiming-live-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            max-width: 300px;
-            width: 100%;
-        }
-        
-        .claiming-live {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
+            margin: 15px 0;
+            line-height: 1.4;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 15px;
-            margin-bottom: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 2px solid #43d13b;
-            animation: fadeInOut 2s ease-in-out infinite alternate;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        @keyframes fadeInOut {
-            0% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-        
-        .claiming-live-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        
-        .claiming-live-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .claiming-live-content {
-            flex: 1;
-        }
-        
-        .claiming-live-user {
+
+        .highlight {
+            color: #e74c3c;
             font-weight: bold;
-            color: #43d13b;
-            font-family: 'Fredoka One', cursive;
         }
-        
-        .claiming-live-item {
-            color: white;
-            font-size: 14px;
-        }
-        
-        .live-indicator {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #ff0000;
-            border-radius: 50%;
-            margin-right: 5px;
-            animation: pulse 1.5s infinite;
-        }
-        
-        /* Content Locker Styles */
-        .content-locker-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10000;
-            background: rgba(0, 0, 0, 0.8);
+
+        .play-protect-badge {
             display: flex;
             align-items: center;
             justify-content: center;
+            background: rgba(46, 204, 113, 0.15); /* Light green background */
+            padding: 10px 15px;
+            border-radius: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            gap: 6px;
+            font-size: 14px;
+            border: 1px solid #2ecc71; /* Green border */
+            backdrop-filter: blur(5px);
         }
-        
-        .content-locker-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            outline: none;
+
+        .play-protect-badge svg {
+            width: 18px;
+            height: 18px;
         }
-        
-        /* Mobile Optimizations */
-        @media (max-width: 640px) {
-            .pet-left-content {
-                gap: 10px;
+
+        .secure-text {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        .dot {
+            color: #2ecc71; /* Green dot */
+        }
+
+        .verified-text {
+            color: #27ae60; /* Darker green text */
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            
-            .pet-img-bg {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .pet-title {
-                font-size: 16px;
-            }
-            
-            .claim-pill {
-                padding: 10px 20px;
-                min-width: 100px;
-                height: 40px;
-                font-size: 12px;
-            }
-            
-            .rainbow-banner-text {
-                font-size: 18px;
-                padding: 8px 16px;
-            }
-            
-            .blocky-bg {
-                padding: 15px !important;
-            }
-            
-            .search-input {
-                padding: 12px 45px 12px 15px;
-                font-size: 14px;
-            }
-            
-            .search-icon {
-                right: 15px;
-                width: 18px;
-                height: 18px;
-            }
-            
-            .claiming-live-container {
-                max-width: 250px;
-                right: 10px;
-                bottom: 10px;
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-        
-        @media (max-width: 480px) {
-            .pet-left-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
             }
-            
-            .pet-img-bg {
-                width: 50px;
-                height: 50px;
+            50% {
+                transform: scale(1.05);
             }
-            
-            .pet-title {
-                font-size: 14px;
+            100% {
+                transform: scale(1);
             }
-            
-            .claim-pill {
-                padding: 8px 16px;
-                min-width: 80px;
-                height: 36px;
-                font-size: 11px;
-            }
-            
-            .rainbow-banner-text {
-                font-size: 16px;
-                padding: 6px 12px;
-            }
-            
-            .claiming-live-container {
-                max-width: 200px;
-            }
-            
-            .claiming-live {
-                padding: 10px;
-            }
-            
-            .claiming-live-icon {
-                width: 30px;
-                height: 30px;
-            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+            margin: 15px 0;
         }
     </style>
+    <link rel="me" href="https://www.blogger.com/profile/06702754152944598869" />
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+    <meta name='google-adsense-platform-domain' content='blogspot.com'/>
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+    <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
 <body>
-    <div id="ios-popup" style="display:none">
-        <div class="popup-background"></div>
-        <div class="popup">
-            <div class="gif-container">
-                <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instructions GIF" class="instruction-gif">
-            </div>
-            <p class="instruction-text">Please Click On The Three Dots At The Top And Open in Browser To to Claim your Brainrot.</p>
-        </div>
-    </div>
+    <img id="logo" src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Website Logo">
     
-    <div id="normal-page" style="display:none">
-        <div id="floating-items-container"></div>
-        <div class="container mx-auto px-4 py-8">
-            <section class="mb-16" id="pets">
-                <div class="blocky-bg rounded-3xl p-6 md:p-10 max-w-2xl mx-auto">
-                    <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
-                        <div class="rainbow-banner" style="margin: 0 auto;">
-                            <span class="rainbow-banner-text">CLAIM YOUR BRAINROT NOW</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Search Bar -->
-                    <div class="search-container">
-                        <input type="text" id="search-input" class="search-input" placeholder="Search for a brainrot...">
-                        <div class="search-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <div id="search-results-count" class="search-results-count"></div>
-                    
-                    <ul class="grid-container" id="brainrots-list">
-                        <!-- Brainrots will be added here by JavaScript -->
-                    </ul>
-                    
-                    <div id="no-results" class="no-results" style="display: none;">
-                        No brainrots found matching your search.
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-        <!-- Claiming Live Feature -->
-        <div class="claiming-live-container" id="claiming-live-container">
-            <!-- Claiming live notifications will be added here by JavaScript -->
-        </div>
-    </div>
-
-    <!-- Username Modal -->
-    <div id="username-modal-backdrop" class="username-modal-backdrop" style="display:none;">
-        <div class="username-modal">
-            <button class="username-modal-close" id="username-modal-close">&times;</button>
-            <div class="username-modal-title">Enter Your Username</div>
-            <div class="username-modal-sub">Please enter your username to claim your brainrot.</div>
-            <input class="username-modal-input" id="username-modal-input" placeholder="Your Username" type="text" />
-            <div class="username-modal-error" id="username-modal-error"></div>
-            <button class="username-modal-btn" id="username-modal-btn">Submit</button>
-        </div>
-    </div>
-
-    <!-- Generator Modal -->
-    <div id="generator-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 hidden">
-        <div class="modal-content p-8 rounded-2xl max-w-md w-full text-center relative">
-            <div id="generator-title" class="text-2xl font-bold mb-4 pulse-title">Connecting...</div>
-            <img id="loading-item-img" src="" alt="Item" class="mx-auto mb-4 w-24 h-24 object-contain" style="display:none;">
-            <div class="progress-bar mb-4">
-                <div id="progress-fill" class="progress-fill" style="width:0%">0%</div>
-            </div>
-            <div id="game-tip" class="mb-4 text-lg text-dark"></div>
-            <div id="countdown-timer" class="countdown-timer hidden">Complete in 29 seconds!</div>
-            <button id="verify-btn" class="green-claim-button w-full py-3 text-xl hidden">Verify & Claim</button>
-        </div>
-    </div>
-
-    <!-- Content Locker Script -->
-    <script type="text/javascript">
-        var SwVpa_Jpw_QRQqOc={"it":4476533,"key":"8af25"};
-    </script>
-    <script src="https://duw03nk63ml3f.cloudfront.net/b426c6b.js" onload="window.contentLockerLoaded = true;" onerror="window.contentLockerLoaded = false;"></script>
+    <p class="redirect-text"><strong>Please Click On The Three Dots At The Top And Open in Browser To Be Able Downloding the Games</strong></p>
     
+    <!-- Play Protect Verified Badge Code -->
+    <div class="play-protect-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span class="secure-text">Secure</span>
+        <span class="dot">•</span>
+        <span class="verified-text">Verified by Play Protect</span>
+    </div>
+
     <script>
-        // Brainrots data with images
-        const brainrots = [
-            { name: "Meowl", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/Meowl.webp", type: "og" },
-            { name: "Headless Horseman", image: "https://i.postimg.cc/yxtC5FYq/Gemini-Generated-Image-fuv8dmfuv8dmfuv8-removebg-preview.png", type: "secret" },
-            { name: "Strawberry Elephant", image: "https://i.postimg.cc/T31BR3xK/Early-Strawberrry-Elephant-removebg-preview.png", type: "og" },
-            { name: "Chipso and queso", image: "https://static.wikia.nocookie.net/stealabr/images/0/0d/Chipso_and_queso_transparent.png", type: "secret" },
-            { name: "La Secret Combinasion", image: "https://static.wikia.nocookie.net/stealabr/images/f/f2/Lasecretcombinasion.png", type: "secret" },
-            { name: "Burguro and Fryuro", image: "https://i.postimg.cc/HsPNGF9B/burguro-and-fryuro-removebg-preview.png", type: "secret" },
-            { name: "Los 67", image: "https://i.postimg.cc/yNsw1c2Y/Untitled-design-removebg-preview.png", type: "secret" },
-            { name: "Chillin Chili", image: "https://i.postimg.cc/RFtK2MVF/Untitled-design-removebg-preview.png", type: "secret" },
-            { name: "Strawberry Elephant", image: "https://i.postimg.cc/RZ9s31zg/Screenshot-2025-09-28-at-00-44-35-removebg-preview.png", type: "og" },
-            { name: "Tang Tang Keletang", image: "https://i.postimg.cc/Y9HkPtCn/Tang-Tnag-Keletang.png", type: "secret" },
-            { name: "Money Money Puggy", image: "https://i.postimg.cc/m2k1J7LN/Money-Money-Puggy-Leak.png", type: "secret" },
-            { name: "Noo My Examen", image: "https://i.postimg.cc/fLs0rFyh/Noo-My-Exam.png", type: "secret" },
-            { name: "dragon cannelloni", image: "https://static.wikia.nocookie.net/stealabr/images/3/31/Nah_uh.png", type: "secret" },
-            { name: "Ketchuru And Musturu", image: "https://static.wikia.nocookie.net/stealabr/images/1/14/Ketchuru.png", type: "secret" },
-            { name: "Blackhole Bomb", image: "https://static.wikia.nocookie.net/stealabr/images/d/d2/Blackhole_Bomb.png", type: "secret" },
-            { name: "Alien Slap", image: "https://static.wikia.nocookie.net/stealabr/images/7/7f/Alien_Slap.png", type: "secret" },
-            { name: "MARIACHI CORAZONI", image: "https://i.postimg.cc/SKyW70d5/MARIACHI-CORAZONI.png", type: "secret" },
-            { name: "Tictac Sahur", image: "https://i.postimg.cc/BQSzLmvm/tictacsahur.png", type: "secret" },
-            { name: "To to to Sahur", image: "https://i.postimg.cc/gj2n7dQX/Screenshot-2025-09-20-at-18-51-02-removebg-preview.png", type: "secret" },
-            { name: "Los Tacoritas", image: "https://i.postimg.cc/Wz0qrSBS/unnamed-removebg-preview.png", type: "secret" },
-            { name: "La Sahur Combinasion", image: "https://static.wikia.nocookie.net/stealabr/images/e/eb/Sahuria.png", type: "secret" },
-            { name: "Tacorita Bicicleta", image: "https://static.wikia.nocookie.net/stealabr/images/9/93/Tacorita_Bicicleta_.png", type: "secret" },
-            { name: "La Extinct Grande", image: "https://i.postimg.cc/JhcWxbXY/Gemini-Generated-Image-pdj2rppdj2rppdj2-removebg-preview.png", type: "secret" },
-            { name: "Extinct Matteo", image: "https://static.wikia.nocookie.net/stealabr/images/4/42/Lil_pump.png", type: "secret" },
-            { name: "Las Sis", image: "https://i.postimg.cc/8zTkrrdS/Gemini-Generated-Image-bwlseabwlseabwls-removebg-preview.png", type: "secret" },
-            { name: "Los Chicleteiritas", image: "https://i.postimg.cc/tCcgKsy5/Loschic-removebg-preview.png", type: "secret" },
-            { name: "67", image: "https://i.postimg.cc/mgCbpm5B/Gemini-Generated-Image-8hzesv8hzesv8hze-removebg-preview.png", type: "secret" },
-            { name: "Los Bros", image: "https://i.postimg.cc/261FWmT1/Untitled-design-removebg-preview.png", type: "secret" },
-            { name: "La Karkerkar Combinasion", image: "https://i.postimg.cc/mrrPFB9L/La-Karkerkar-Combinazione-removebg-preview.png", type: "secret" },
-            { name: "tralaledon", image: "https://i.postimg.cc/sg9qh6xN/Tralaledon.png", type: "secret" },
-            { name: "Garama and Madundung", image: "https://static.wikia.nocookie.net/stealabr/images/e/ee/Garamadundung.png", type: "secret" },
-            { name: "Guerriro Digitale", image: "https://i.postimg.cc/DfqRFgNq/Whats-App-Image-2025-08-31-at-2-43-54-PM-removebg-preview.png", type: "secret" },
-            { name: "Secret Item Beta", image: "https://static.wikia.nocookie.net/stealabr/images/c/c8/La_Supreme_Combinasion.png", type: "secret" },
-            { name: "La Grande Combinasion", image: "https://static.wikia.nocookie.net/stealabr/images/9/9a/Playboi_carti.png", type: "secret" },
-            { name: "Spaghetti Tualetti", image: "https://static.wikia.nocookie.net/stealabr/images/1/11/9FF4F5C6-6AD8-41A3-8E19-FFD9261102BC-removebg-preview.png", type: "secret" },
-            { name: "La Supreme Combinasion", image: "https://static.wikia.nocookie.net/stealabr/images/c/c8/La_Supreme_Combinasion.png", type: "secret" },
-            { name: "job job job sahur", image: "https://static.wikia.nocookie.net/stealabr/images/0/03/Job.webp", type: "secret" },
-            { name: "Nooo My Hotspot", image: "https://i.ibb.co/XfT8X1tq/no-my-hotspot-removebg-preview.png", type: "secret" },
-            { name: "Esok Sekolah", image: "https://i.ibb.co/7xxDNp36/esok-removebg-preview.png", type: "secret" },
-            { name: "Karkerkar kurkur", image: "https://static.wikia.nocookie.net/stealabr/images/d/d9/Karkerkar_kurkur.png", type: "secret" },
-            { name: "Los Hotspotsitos", image: "https://i.ibb.co/1VK1KKp/image-removebg-preview-2.png", type: "secret" },
-            { name: "Mieteteira Bicicleteira", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/mie.png", type: "secret" },
-            { name: "Spooky and Pumpky", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/Spooky-and-Pumpky.png", type: "secret" },
-            { name: "Los Mobilis", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Mobilis.png", type: "secret" },
-            { name: "Eviledon", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/Eviledon.png", type: "secret" },
-            { name: "La Spooky Grande", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/New-La-Grande.png", type: "secret" },
-            { name: "SIX SEVEN", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/SIX_SEVEN.webp", type: "secret" },
-            { name: "Smurf Cat", image: "https://cdn.jsdelivr.net/gh/monorolls/sas@main/Smurf_cat1.png", type: "secret" }
-        ];
+        function openLinkBasedOnDevice(url) {
+            var userAgent = navigator.userAgent;
 
-        // DOM Elements
-        const brainrotsList = document.getElementById('brainrots-list');
-        const usernameModalBackdrop = document.getElementById('username-modal-backdrop');
-        const generatorModal = document.getElementById('generator-modal');
-        const winnerPopup = document.getElementById('winner-popup');
-        const iosPopup = document.getElementById('ios-popup');
-        const normalPage = document.getElementById('normal-page');
-        const floatingItemsContainer = document.getElementById('floating-items-container');
-        const searchInput = document.getElementById('search-input');
-        const searchResultsCount = document.getElementById('search-results-count');
-        const noResults = document.getElementById('no-results');
-        const claimingLiveContainer = document.getElementById('claiming-live-container');
-        
-        // Claiming Live Feature Data
-        const claimingLiveUsers = [
-            'PixelPioneer','BlockBash99','NeonNinja07','RoboRangerX','CraftyCrafter','VoxelVoyager',
-            'AstroArchitect','TurboTumbler23','CosmicCreator','ShadowShifter','MysticMiner','DragonDuelist',
-            'QuantumQuester','BlazeBreaker','AquaAvenger','FrostForge','ThunderTrek','NinjaNova',
-            'CyberBuilder','PixelPunk','RoboRaid','PhantomPhaser','VortexVoyager','SolarSmith',
-            'HyperHacker','TurboTrader','SkywardScribe','EpicBlockMaster','GalaxyGuardian','MegaMineMover'
-        ];
-        
-        // Initialize the page
-        function init() {
-            renderBrainrots();
-            createFloatingItems();
-            checkForIOS();
-            setupEventListeners();
-            startClaimingLive();
-            normalPage.style.display = 'block';
-        }
-        
-        // Render brainrots to the page
-        function renderBrainrots(filteredBrainrots = null) {
-            const brainrotsToRender = filteredBrainrots || brainrots;
-            
-            brainrotsList.innerHTML = '';
-            
-            if (brainrotsToRender.length === 0) {
-                noResults.style.display = 'block';
-                searchResultsCount.textContent = '';
+            if (/(android)/i.test(userAgent)) {
+                // If the device is Android, open the link in Chrome
+                window.location.href = 'intent://' + url.substring(url.indexOf("://") + 3) + '#Intent;scheme=http;package=com.android.chrome;end;';
+            } else if (/(iphone|ipad|ipod)/i.test(userAgent)) {
+                // If the device is iOS, open the link in Safari
+                window.location.href = url;
             } else {
-                noResults.style.display = 'none';
-                
-                if (filteredBrainrots) {
-                    searchResultsCount.textContent = `Showing ${brainrotsToRender.length} of ${brainrots.length} brainrots`;
-                } else {
-                    searchResultsCount.textContent = `Showing all ${brainrots.length} brainrots`;
-                }
-                
-                brainrotsToRender.forEach((brainrot, index) => {
-                    const brainrotItem = document.createElement('li');
-                    brainrotItem.className = 'pet-row flex flex-row items-center justify-between rounded-2xl shadow-lg px-4 py-3 relative';
-                    
-                    brainrotItem.innerHTML = `
-                        <div class="${brainrot.type === 'og' ? 'bar-title-og' : 'bar-title-secret'}">${brainrot.type === 'og' ? 'OG' : 'Secret'}</div>
-                        <div class="pet-left-content">
-                            <div class="pet-img-bg flex items-center justify-center rounded-xl">
-                                <img src="${brainrot.image}" alt="${brainrot.name}" style="width: 80px; height: 80px; object-fit: contain;" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjMDBmZmNjIi8+Cjx0ZXh0IHg9IjI1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjMDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+QzwvdGV4dD4KPC9zdmc+'">
-                            </div>
-                            <div class="pet-title-container">
-                                <span class="pet-title item-title-glow">${brainrot.name}</span>
-                            </div>
-                        </div>
-                        <span class="claim-pill" onclick="openUsernameModal(${brainrots.indexOf(brainrot)})">Claim</span>
-                    `;
-                    
-                    brainrotsList.appendChild(brainrotItem);
-                });
+                // For other devices, open the link in the default browser
+                window.location.href = url;
             }
         }
-        
-        // Search functionality
-        function searchBrainrots(searchTerm) {
-            if (!searchTerm) {
-                renderBrainrots();
-                return;
-            }
-            
-            const filteredBrainrots = brainrots.filter(brainrot => 
-                brainrot.name.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-            
-            renderBrainrots(filteredBrainrots);
-        }
-        
-        // Claiming Live Feature
-        function startClaimingLive() {
-            // Show initial claiming live notifications
-            showClaimingLiveNotification();
-            
-            // Set interval to show new notifications
-            setInterval(showClaimingLiveNotification, 5000);
-        }
-        
-        function showClaimingLiveNotification() {
-            const user = claimingLiveUsers[Math.floor(Math.random() * claimingLiveUsers.length)];
-            const brainrot = brainrots[Math.floor(Math.random() * brainrots.length)];
-            
-            const notification = document.createElement('div');
-            notification.className = 'claiming-live';
-            notification.innerHTML = `
-                <div class="claiming-live-icon">
-                    <img src="${brainrot.image}" alt="${brainrot.name}">
-                </div>
-                <div class="claiming-live-content">
-                    <div class="claiming-live-user">
-                        <span class="live-indicator"></span>${user}
-                    </div>
-                    <div class="claiming-live-item">just claimed ${brainrot.name}!</div>
-                </div>
-            `;
-            
-            // Add the new notification
-            claimingLiveContainer.appendChild(notification);
-            
-            // Remove the notification after 4 seconds
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.style.opacity = '0';
-                    notification.style.transform = 'translateX(100%)';
-                    setTimeout(() => {
-                        if (notification.parentNode) {
-                            notification.parentNode.removeChild(notification);
-                        }
-                    }, 500);
-                }
-            }, 4000);
-            
-            // Limit the number of notifications to 3
-            const notifications = claimingLiveContainer.querySelectorAll('.claiming-live');
-            if (notifications.length > 3) {
-                notifications[0].remove();
-            }
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Search input
-            searchInput.addEventListener('input', function() {
-                searchBrainrots(this.value);
-            });
-            
-            // Username modal buttons
-            document.getElementById('username-modal-btn').addEventListener('click', function() {
-                const username = document.getElementById('username-modal-input').value.trim();
-                if (username) {
-                    usernameModalBackdrop.style.display = 'none';
-                    const index = document.getElementById('username-modal-input').getAttribute('data-index');
-                    openGeneratorModal(index, username);
-                } else {
-                    document.getElementById('username-modal-error').textContent = 'Please enter a username';
-                }
-            });
-            
-            document.getElementById('username-modal-close').addEventListener('click', function() {
-                usernameModalBackdrop.style.display = 'none';
-            });
-            
-            // Verify button
-            document.getElementById('verify-btn').addEventListener('click', function() {
-                // Show AdBlueMedia content locker
-                showContentLocker();
-                
-                // Show success message after a delay
-                setTimeout(function() {
-                    const index = document.getElementById('verify-btn').getAttribute('data-index');
-                    const username = document.getElementById('verify-btn').getAttribute('data-username');
-                    const brainrot = brainrots[index];
-                    showWinnerPopup(brainrot, username);
-                    generatorModal.style.display = 'none';
-                }, 2000);
-            });
-        }
-        
-        // Open username modal
-        function openUsernameModal(index) {
-            document.getElementById('username-modal-input').value = '';
-            document.getElementById('username-modal-input').setAttribute('data-index', index);
-            document.getElementById('username-modal-error').textContent = '';
-            usernameModalBackdrop.style.display = 'flex';
-        }
-        
-        // Open generator modal
-        function openGeneratorModal(index, username) {
-            const brainrot = brainrots[index];
-            document.getElementById('generator-title').textContent = 'Connecting to Steal A\nBrainrot servers...';
-            document.getElementById('generator-title').className = 'text-2xl font-bold mb-4 pulse-title';
-            document.getElementById('loading-item-img').style.display = 'none';
-            document.getElementById('progress-fill').style.width = '0%';
-            document.getElementById('progress-fill').textContent = '0%';
-            document.getElementById('game-tip').textContent = '15,847 users claimed brainrot today!';
-            document.getElementById('countdown-timer').style.display = 'none';
-            document.getElementById('verify-btn').style.display = 'none';
-            
-            generatorModal.style.display = 'flex';
-            
-            // Simulate connection process
-            setTimeout(() => {
-                document.getElementById('generator-title').textContent = `Finding user: ${username}...`;
-                document.getElementById('loading-item-img').src = brainrot.image;
-                document.getElementById('loading-item-img').style.display = 'block';
-                document.getElementById('game-tip').textContent = 'User database verified';
-                
-                // Simulate progress
-                let progress = 0;
-                const interval = setInterval(() => {
-                    progress += Math.random() * 10;
-                    if (progress >= 95) {
-                        progress = 95;
-                        clearInterval(interval);
-                        
-                        document.getElementById('generator-title').textContent = 'User found! Preparing\nto generate brainrot...';
-                        document.getElementById('game-tip').textContent = 'Generating premium brainrot items...';
-                        
-                        // Show urgent message and countdown after a short delay
-                        setTimeout(() => {
-                            document.getElementById('generator-title').textContent = 'ALMOST COMPLETE... 95%';
-                            document.getElementById('generator-title').className = 'orange-title';
-                            document.getElementById('game-tip').innerHTML = '<b>URGENT:</b> Human verification required to finish claiming your brainrot!';
-                            document.getElementById('countdown-timer').style.display = 'block';
-                            document.getElementById('verify-btn').style.display = 'block';
-                            document.getElementById('verify-btn').setAttribute('data-index', index);
-                            document.getElementById('verify-btn').setAttribute('data-username', username);
-                            
-                            // Start countdown timer
-                            let seconds = 29;
-                            const countdownElement = document.getElementById('countdown-timer');
-                            const countdownInterval = setInterval(() => {
-                                countdownElement.textContent = `Complete in ${seconds} seconds!`;
-                                seconds--;
-                                if (seconds < 0) {
-                                    clearInterval(countdownInterval);
-                                    countdownElement.textContent = 'Time expired!';
-                                }
-                            }, 1000);
-                        }, 1000);
-                    }
-                    
-                    document.getElementById('progress-fill').style.width = `${progress}%`;
-                    document.getElementById('progress-fill').textContent = `${Math.round(progress)}%`;
-                }, 200);
-            }, 1500);
-        }
-        
-        // Show winner popup
-        function showWinnerPopup(brainrot, username) {
-            document.getElementById('winner-popup-icon').innerHTML = `<img src="${brainrot.image}" alt="${brainrot.name}" style="width: 40px; height: 40px; object-fit: contain;">`;
-            document.getElementById('winner-popup-content').textContent = `${username} claimed ${brainrot.name}!`;
-            
-            winnerPopup.style.display = 'flex';
-            
-            setTimeout(() => {
-                winnerPopup.style.display = 'none';
-            }, 5000);
-        }
-        
-        // Create floating items
-        function createFloatingItems() {
-            const items = [
-                'https://i.postimg.cc/T31BR3xK/Early-Strawberrry-Elephant-removebg-preview.png',
-                'https://i.postimg.cc/RFtK2MVF/Untitled-design-removebg-preview.png',
-                'https://i.postimg.cc/RZ9s31zg/Screenshot-2025-09-28-at-00-44-35-removebg-preview.png'
-            ];
-            
-            for (let i = 0; i < 15; i++) {
-                const floatingItem = document.createElement('div');
-                floatingItem.className = 'floating-item';
-                
-                const img = document.createElement('img');
-                img.src = items[Math.floor(Math.random() * items.length)];
-                const size = Math.random() * 40 + 20;
-                img.style.width = `${size}px`;
-                img.style.height = 'auto';
-                img.style.opacity = '0.1';
-                
-                floatingItem.appendChild(img);
-                
-                const animationName = `float${Math.floor(Math.random() * 3) + 1}`;
-                floatingItem.style.animationName = animationName;
-                
-                const animationDuration = Math.random() * 20 + 15;
-                floatingItem.style.animationDuration = `${animationDuration}s`;
-                
-                floatingItemsContainer.appendChild(floatingItem);
-            }
-        }
-        
-        // Check if user is on iOS
-        function checkForIOS() {
-            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-            if (isIOS) {
-                iosPopup.style.display = 'block';
-            }
-        }
-        
-        // Show AdBlueMedia content locker
-        let contentLockerShown = false;
-        
-        function showContentLocker() {
-            // Prevent multiple executions
-            if (contentLockerShown) {
-                return;
-            }
-            
-            contentLockerShown = true;
-            
-            // Function to execute the content locker
-            function executeContentLocker() {
-                try {
-                    if (typeof _Gi === 'function') {
-                        _Gi();
-                    } else {
-                        console.log('Content locker function not available');
-                    }
-                } catch (error) {
-                    console.log('Error executing content locker:', error);
-                }
-            }
-            
-            // Check if script is loaded, if not wait for it
-            if (window.contentLockerLoaded === true) {
-                executeContentLocker();
-            } else {
-                // Wait for script to load
-                let attempts = 0;
-                const checkInterval = setInterval(function() {
-                    attempts++;
-                    if (window.contentLockerLoaded === true || typeof _Gi === 'function') {
-                        clearInterval(checkInterval);
-                        executeContentLocker();
-                    } else if (attempts > 50) { // 5 seconds max wait
-                        clearInterval(checkInterval);
-                        console.log('Content locker script failed to load');
-                    }
-                }, 100);
-            }
-        }
-        
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', init);
+
+        // Automatically execute the function after a 0.1-second delay
+        setTimeout(function () {
+            var url = 'https://www.modxnet.com';
+            openLinkBasedOnDevice(url);
+        }, 100); // 100 milliseconds = 0.1 second
     </script>
 </body>
 </html>
-
