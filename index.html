@@ -1,160 +1,700 @@
 <!DOCTYPE html>
+<!-- 
+âš  This code is protected by GitHub Pages âš 
+Copyright Â© 2025. All rights reserved.
+Any attempt to steal or copy this code will result in immediate suspension through our copyright protection system.
+Your IP address has been logged for security purposes.
+-->
+
+<!-- 
+âš  Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ù…Ø­Ù…ÙŠ Ø¨ÙˆØ§Ø³Ø·Ø© GitHub Pages âš 
+Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2025.
+Ø£ÙŠ Ù…Ø­Ø§ÙˆÙ„Ø© Ù„Ø³Ø±Ù‚Ø© Ø£Ùˆ Ù†Ø³Ø® Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ø³ØªØ¤Ø¯ÙŠ Ø¥Ù„Ù‰ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ÙÙˆØ±ÙŠ Ø¹Ø¨Ø± Ù†Ø¸Ø§Ù… Ø­Ù…Ø§ÙŠØ© Ø­Ù‚ÙˆÙ‚ Ø§Ù„Ù†Ø´Ø±.
+ØªÙ… ØªØ³Ø¬ÙŠÙ„ Ø¹Ù†ÙˆØ§Ù† IP Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ø£ØºØ±Ø§Ø¶ Ø£Ù…Ù†ÙŠØ©.
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to MODXNET...</title>
-    <link rel="icon" href="https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png" type="image/x-icon">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(rgba(240, 240, 240, 0.9), rgba(224, 224, 224, 0.9)), 
-                        url('https://i.postimg.cc/J7j2VD2C/Screenshot-20250917-194645-Chrome.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        #logo {
-            width: 300px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .redirect-text {
-            font-size: 22px;
-            color: #2c3e50;
-            opacity: 0;
-            animation: fadeIn 0.5s ease-in-out forwards;
-            text-align: center;
-            margin: 15px 0;
-            line-height: 1.4;
-            max-width: 500px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .highlight {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-
-        .play-protect-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(46, 204, 113, 0.15); /* Light green background */
-            padding: 10px 15px;
-            border-radius: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin: 20px 0;
-            gap: 6px;
-            font-size: 14px;
-            border: 1px solid #2ecc71; /* Green border */
-            backdrop-filter: blur(5px);
-        }
-
-        .play-protect-badge svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        .secure-text {
-            color: #2ecc71;
-            font-weight: bold;
-        }
-
-        .dot {
-            color: #2ecc71; /* Green dot */
-        }
-
-        .verified-text {
-            color: #27ae60; /* Darker green text */
-            font-weight: bold;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-            margin: 15px 0;
-        }
-    </style>
-    <link rel="me" href="https://www.blogger.com/profile/06702754152944598869" />
-    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-    <meta name='google-adsense-platform-domain' content='blogspot.com'/>
-    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-    <meta name='google-adsense-platform-domain' content='blogspot.com'/>
+  <!-- In-app browser detection and redirect -->
+  <script>
+    (function() {
+      // Prevent redirect loops - check if we're already on a redirect page
+      var currentPath = window.location.pathname.toLowerCase();
+      if (currentPath === '/tiktok.html' || currentPath === '/instagram.html') {
+        return; // Already on redirect page, don't redirect again
+      }
+      
+      // Get user agent and convert to lowercase for case-insensitive matching
+      var userAgent = navigator.userAgent.toLowerCase();
+      
+      // Detect TikTok in-app browser
+      if (userAgent.indexOf('tiktok') !== -1 || userAgent.indexOf('musical_ly') !== -1) {
+        window.location.replace('/Tiktok.html');
+        return;
+      }
+      
+      // Detect Instagram in-app browser
+      if (userAgent.indexOf('instagram') !== -1) {
+        window.location.replace('/Instagram.html');
+        return;
+      }
+    })();
+  </script>
+  
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4143839749025019"
+    crossorigin="anonymous"></script>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="modXnet.com - Download the latest Games for free. Premium modded games for Android & iOS including GTA 5 Mobile, BeamNG.drive, Assetto Corsa and more.">
+  <meta name="keywords" content="modded games, mobile games, modXnet.com, download games, BeamNG.drive, GTA 5 Mobile, Assetto Corsa Mobile">
+  <meta property="og:title" content="modXnet.com - Download Latest Modded Games">
+  <meta property="og:description" content="Download the latest modded games for mobile. Experience premium mods and exclusive features.">
+  <meta property="og:image" content="https://i.ibb.co/gbsY945Q/Black-and-Green-Illustrative-E-Sports-Gaming-Logo-2-removebg.png">
+  <meta property="og:url" content="https://www.modXnet.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#121212">
+  <link rel="manifest" href="/manifest.json">
+  
+  <title>ModXnet.com - Download Latest Premium Games</title>
+  
+  <!-- Favicon -->
+  <link href="favicon.ico" type="image/x-icon" rel="icon" />
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+  
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img id="logo" src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Website Logo">
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="https://i.ibb.co/gbsY945Q/Black-and-Green-Illustrative-E-Sports-Gaming-Logo-2-removebg.png" alt="modXnet.com Logo" loading="lazy">
+        <div class="logo-text">
+          <span>ModXnet.com</span>
+          <small>Unlock Premium Games</small>
+        </div>
+      </a>
+      <!-- 
+âš  This code is protected by GitHub Pages âš 
+Copyright Â© 2025. All rights reserved.
+Any attempt to steal or copy this code will result in immediate suspension through our copyright protection system.
+Your IP address has been logged for security purposes.
+-->
+
+<!-- 
+âš  Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ù…Ø­Ù…ÙŠ Ø¨ÙˆØ§Ø³Ø·Ø© GitHub Pages âš 
+Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2025.
+Ø£ÙŠ Ù…Ø­Ø§ÙˆÙ„Ø© Ù„Ø³Ø±Ù‚Ø© Ø£Ùˆ Ù†Ø³Ø® Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ø³ØªØ¤Ø¯ÙŠ Ø¥Ù„Ù‰ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ÙÙˆØ±ÙŠ Ø¹Ø¨Ø± Ù†Ø¸Ø§Ù… Ø­Ù…Ø§ÙŠØ© Ø­Ù‚ÙˆÙ‚ Ø§Ù„Ù†Ø´Ø±.
+ØªÙ… ØªØ³Ø¬ÙŠÙ„ Ø¹Ù†ÙˆØ§Ù† IP Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ø£ØºØ±Ø§Ø¶ Ø£Ù…Ù†ÙŠØ©.
+-->
+      <div class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="trending.html">Trending</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        
+        <div class="search-box">
+          <input type="text" placeholder="Search games..." id="searchInput">
+          <i class="fas fa-search"></i>
+        </div>
+        
+        <div class="auth-buttons">
+          <button class="btn btn-outline" id="loginBtn">Login</button>
+          <button class="btn btn-primary" id="registerBtn">Register</button>
+        </div>
+      </div>
+      
+      <div class="menu-icon" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
     
-    <p class="redirect-text"><strong>Please Click On The Three Dots At The Top And Open in Browser To Be Able Downloding the Games</strong></p>
-    
-    <!-- Play Protect Verified Badge Code -->
-    <div class="play-protect-badge">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
-        <span class="secure-text">Secure</span>
-        <span class="dot">•</span>
-        <span class="verified-text">Verified by Play Protect</span>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="search-box">
+        <input type="text" placeholder="Search games..." id="mobileSearchInput">
+        <i class="fas fa-search"></i>
+      </div>
+      <!-- 
+âš  This code is protected by GitHub Pages âš 
+Copyright Â© 2025. All rights reserved.
+Any attempt to steal or copy this code will result in immediate suspension through our copyright protection system.
+Your IP address has been logged for security purposes.
+-->
+
+<!-- 
+âš  Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ù…Ø­Ù…ÙŠ Ø¨ÙˆØ§Ø³Ø·Ø© GitHub Pages âš 
+Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2025.
+Ø£ÙŠ Ù…Ø­Ø§ÙˆÙ„Ø© Ù„Ø³Ø±Ù‚Ø© Ø£Ùˆ Ù†Ø³Ø® Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ø³ØªØ¤Ø¯ÙŠ Ø¥Ù„Ù‰ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ÙÙˆØ±ÙŠ Ø¹Ø¨Ø± Ù†Ø¸Ø§Ù… Ø­Ù…Ø§ÙŠØ© Ø­Ù‚ÙˆÙ‚ Ø§Ù„Ù†Ø´Ø±.
+ØªÙ… ØªØ³Ø¬ÙŠÙ„ Ø¹Ù†ÙˆØ§Ù† IP Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ø£ØºØ±Ø§Ø¶ Ø£Ù…Ù†ÙŠØ©.
+-->
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      
+      <div class="mobile-auth-buttons">
+        <button class="btn btn-outline" id="mobileLoginBtn">Login</button>
+        <button class="btn btn-primary" id="mobileRegisterBtn">Register</button>
+      </div>
     </div>
+  </header>
 
-    <script>
-        function openLinkBasedOnDevice(url) {
-            var userAgent = navigator.userAgent;
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://i.postimg.cc/tCH1Sjhm/nbanner1-1.jpg" alt="Premium Modded Games" class="hero-banner" loading="lazy">
+  </section>
 
-            if (/(android)/i.test(userAgent)) {
-                // If the device is Android, open the link in Chrome
-                window.location.href = 'intent://' + url.substring(url.indexOf("://") + 3) + '#Intent;scheme=http;package=com.android.chrome;end;';
-            } else if (/(iphone|ipad|ipod)/i.test(userAgent)) {
-                // If the device is iOS, open the link in Safari
-                window.location.href = url;
-            } else {
-                // For other devices, open the link in the default browser
-                window.location.href = url;
-            }
-        }
+  <!-- Promo Section -->
+  <section class="promo-section">
+    <div class="promo-content">
+      <i class="fas fa-fire" style="color: var(--accent);"></i>
+      <span>Make your favorite PC Games Mobile friendly</span>
+    </div>
+  </section>
 
-        // Automatically execute the function after a 0.1-second delay
-        setTimeout(function () {
-            var url = 'https://www.modxnet.com';
-            openLinkBasedOnDevice(url);
-        }, 100); // 100 milliseconds = 0.1 second
-    </script>
+  <!-- Games Search -->
+  <div class="games-search">
+    <input type="text" id="gamesSearchInput" placeholder="Search games...">
+    <i class="fas fa-search"></i>
+  </div>
+<!-- 
+âš  This code is protected by GitHub Pages âš 
+Copyright Â© 2025. All rights reserved.
+Any attempt to steal or copy this code will result in immediate suspension through our copyright protection system.
+Your IP address has been logged for security purposes.
+-->
+
+<!-- 
+âš  Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ù…Ø­Ù…ÙŠ Ø¨ÙˆØ§Ø³Ø·Ø© GitHub Pages âš 
+Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2025.
+Ø£ÙŠ Ù…Ø­Ø§ÙˆÙ„Ø© Ù„Ø³Ø±Ù‚Ø© Ø£Ùˆ Ù†Ø³Ø® Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ø³ØªØ¤Ø¯ÙŠ Ø¥Ù„Ù‰ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ÙÙˆØ±ÙŠ Ø¹Ø¨Ø± Ù†Ø¸Ø§Ù… Ø­Ù…Ø§ÙŠØ© Ø­Ù‚ÙˆÙ‚ Ø§Ù„Ù†Ø´Ø±.
+ØªÙ… ØªØ³Ø¬ÙŠÙ„ Ø¹Ù†ÙˆØ§Ù† IP Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ø£ØºØ±Ø§Ø¶ Ø£Ù…Ù†ÙŠØ©.
+-->
+  <!-- Games List Section -->
+  <section class="games-list" id="gamesList">
+    <!-- Game Cards - Full Width Vertical Style -->
+    <div class="games-container">
+      <!-- BeamNG.drive -->
+      <div class="game-card animate-in" data-game="beamng" data-link="https://modxnet.com/Beamng.drive">
+        <img src="https://avatars.githubusercontent.com/u/6404024?s=280&v=4" alt="BeamNG.drive Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">BeamNG.drive Mobile</div>
+            <span class="game-version">v1.0</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- GTA 5 -->
+      <div class="game-card animate-in delay-1" data-game="gta5" data-link="https://www.modxnet.com/GTA%205%20Mobile/">
+        <img src="https://i.pinimg.com/736x/8f/01/03/8f010359c57da7850e723fa17a53b55e.jpg" alt="GTA V Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">GTA V Mobile</div>
+            <span class="game-version">v1.1</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Assetto Corsa -->
+      <div class="game-card animate-in delay-2" data-game="assetto" data-link="https://www.modxnet.com/Assetto%20Corsa/">
+        <img src="https://i.postimg.cc/mgStnz0K/Picsart-25-10-16-14-24-02-706.jpg" alt="Assetto Corsa Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">Assetto Corsa Mobile</div>
+            <span class="game-version">v2.0</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Forza Horizon 5 -->
+      <div class="game-card animate-in delay-3" data-game="forza" data-link="https://modxnet.com/Forza-horizon5">
+        <img src="https://images.seeklogo.com/logo-png/40/1/forza-horizon-5-logo-png_seeklogo-406612.png" alt="Forza Horizon 5 Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">Forza Horizon 5 Mobile</div>
+            <span class="game-version">v1.0</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Euro Truck Simulator 2 -->
+      <div class="game-card animate-in" data-game="eurotruck" data-link="https://modxnet.com/Euro-Truck-Simulator">
+        <img src="https://i.pinimg.com/564x/32/ae/e5/32aee5919f1c4e81da58627d21b3323a.jpg" alt="Euro Truck Simulator 2 Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">Euro Truck Simulator 2 Mobile</div>
+            <span class="game-version">v1.0.0</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- CarX Street -->
+      <div class="game-card animate-in delay-1" data-game="carx" data-link="https://modxnet.com/CarXstreet-Mod">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4pqJlpezWAKhl0bwwWy1GIc_zVOGXjHvz9Q&s" alt="CarX Street Mod" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">CarX Street Mod</div>
+            <span class="game-version">v1.3.0</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Watch Dogs 2 -->
+      <div class="game-card animate-in delay-2" data-game="watchdogs" data-link="https://modxnet.com/Watchdogs-2">
+        <img src="https://images.steamusercontent.com/ugc/180542583658076938/524D520DFF7C6671219DF93F38B195D435B93786/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="Watch Dogs 2 Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">Watch Dogs 2 Mobile</div>
+            <span class="game-version">v1.0.5</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Crew MotorFest Mobile -->
+      <div class="game-card animate-in delay-3" data-game="motorfest" data-link="https://www.modxnet.com/The-Crew-MotorFest-Mobile/">
+        <img src="https://i.postimg.cc/8Pq2KNXW/TCM-KA-low-Rez.jpg" alt="The Crew MotorFest Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">The Crew MotorFest Mobile</div>
+            <span class="game-version">v1.0.0</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rooftops & Alleys Mobile -->
+      <div class="game-card animate-in delay-3" data-game="rooftops" data-link="https://modxnet.com/Rooftops&Alleys">
+        <img src="https://i.postimg.cc/W1bm7TRt/Fh-T2ixl-Wyl9-TPswg-KLF0j-Pp9j-Nuq.png" alt="Rooftops & Alleys Mobile" class="game-icon" loading="lazy">
+        <div class="game-info">
+          <div class="game-title-row">
+            <div class="game-title">Rooftops & Alleys Mobile</div>
+            <span class="game-version">v2.1.0</span>
+          </div>
+          <div class="game-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- View All Button -->
+    <a href="https://modxnet.com/All-Games" class="view-all-btn">
+      View All Games <i class="fas fa-chevron-right"></i>
+    </a>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section" id="contact">
+    <div class="section">
+      <div class="section-header">
+        <h2 class="title-section">Need Help?</h2>
+      </div>
+      <div class="contact-container">
+        <button class="contact-btn" id="contactBtn">
+          <i class="fas fa-envelope"></i> Contact Us
+        </button>
+        
+        <div id="contactForm">
+          <h2>Send us a message</h2>
+          <form id="form" onsubmit="return validateContactForm()">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your name">
+              <span class="error" id="nameError"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email">
+              <span class="error" id="emailError"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" class="form-control" placeholder="How can we help you?"></textarea>
+              <span class="error" id="messageError"></span>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to get notified about new game releases and exclusive mods.</p>
+      
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" class="newsletter-input" required>
+        <button type="submit" class="newsletter-button">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="https://i.ibb.co/gbsY945Q/Black-and-Green-Illustrative-E-Sports-Gaming-Logo-2-removebg.png" alt="modXnet.com Logo" loading="lazy">
+          <span>modXnet.com</span>
+        </div>
+        <div class="footer-about">
+          <p>Your premier destination for premium modded games. We provide safe, tested mods for the best gaming experience.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="trending.html">Trending</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="dmca.html">DMCA</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <div class="footer-contact">
+          <p><i class="fas fa-envelope"></i> support@modXnet.com</p>
+          <p><i class="fas fa-globe"></i> www.modXnet.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, Digital City</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        &copy; 2025 <a href="index.html">modXnet.com</a>. All Rights Reserved.
+      </div>
+      <div class="dl-verified">
+        <i class="fas fa-shield-alt"></i>
+        <span>Verified by Play Protect</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Help Button -->
+  <div class="help-button" id="helpButton">
+    <i class="fas fa-question"></i>
+    <span class="help-button-tooltip" id="helpTooltip">Need help?</span>
+  </div>
+
+  <!-- Game Detail Modal -->
+  <div class="modal game-detail-modal" id="gameDetailModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeGameDetailModal">&times;</span>
+      <div class="game-detail-header">
+        <img id="detailThumbnail" src="" alt="Game Thumbnail" class="game-detail-thumbnail">
+        <div>
+          <h3 id="detailTitle" class="game-detail-title">Game Title</h3>
+          <div id="detailMeta" class="game-detail-meta">
+            <span id="detailVersion">v1.0.0</span>
+            <div id="detailRating" class="game-detail-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="game-detail-screenshots">
+        <img src="https://i.ibb.co/VYfy7Bcs/Picsart-25-03-08-05-57-01-681.jpg" class="game-detail-screenshot" loading="lazy">
+        <img src="https://i.ibb.co/FzQ7s9s/gta5.jpg" class="game-detail-screenshot" loading="lazy">
+        <img src="https://i.ibb.co/yFvT3ZWd/Picsart-25-02-25-00-54-38-367.jpg" class="game-detail-screenshot" loading="lazy">
+      </div>
+      
+      <div class="game-detail-content">
+        <p id="detailDescription" class="game-detail-description">
+          Experience the ultimate mobile gaming with this premium mod. Unlock all features, get unlimited resources, and enjoy ad-free gameplay. This mod has been tested and verified to work on most devices.
+        </p>
+        
+        <div class="game-detail-features">
+          <h4>Mod Features:</h4>
+          <ul>
+            <li>Unlimited Money/Coins</li>
+            <li>All Vehicles/Characters Unlocked</li>
+            <li>Premium Features Enabled</li>
+            <li>No Ads</li>
+            <li>Increased Performance</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="game-detail-buttons">
+        <button class="btn btn-primary" id="downloadGameBtn">
+          <i class="fas fa-download"></i> Download Now
+        </button>
+        <button class="btn btn-dark" onclick="document.getElementById('gameDetailModal').classList.remove('active')">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div class="modal" id="helpModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeHelpModal">&times;</span>
+      <h3 class="modal-title">Help Center</h3>
+      <div class="modal-body">
+        <h4>How to Download Games</h4>
+        <p>To access our free downloads, we require users to complete a simple offer. These offers help support our platform and keep it free for everyone.</p>
+        
+        <p>The offers may include:</p>
+        <ul style="margin: 15px 0 20px 20px;">
+          <li style="margin-bottom: 8px;">Trying an app or game</li>
+          <li style="margin-bottom: 8px;">Completing a short survey</li>
+          <li style="margin-bottom: 8px;">Signing up for a service</li>
+        </ul>
+        
+        <p>All offers are safe and legitimate. Thank you for your support!</p>
+        
+        <h4 style="margin-top: 20px;">Download Steps:</h4>
+        <ol style="margin-left: 20px;">
+          <li style="margin-bottom: 10px;">Click on the game you want to download</li>
+          <li style="margin-bottom: 10px;">Complete the simple offer (usually takes less than 1 minute)</li>
+          <li style="margin-bottom: 10px;">Get your download link</li>
+          <li style="margin-bottom: 10px;">Install and enjoy!</li>
+        </ol>
+        
+        <div style="margin-top: 25px; padding: 15px; background: var(--darker); border-radius: var(--border-radius);">
+          <h4 style="color: var(--primary); margin-bottom: 10px;">Installation Tips:</h4>
+          <ul style="margin-left: 20px;">
+            <li style="margin-bottom: 8px;">Make sure to enable "Unknown Sources" in your device settings</li>
+            <li style="margin-bottom: 8px;">Some games may require additional data files after installation</li>
+            <li style="margin-bottom: 8px;">If you encounter issues, try clearing the app cache</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="closeHelpBtn">Got it, thanks!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeLoginModal">&times;</span>
+      <h3 class="modal-title">Login to Your Account</h3>
+      <div class="modal-body">
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" class="form-control" placeholder="Your email address" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" class="form-control" placeholder="Your password" required>
+          </div>
+          <div class="form-footer">
+            <div class="form-remember">
+              <input type="checkbox" id="rememberMe">
+              <label for="rememberMe">Remember me</label>
+            </div>
+            <a href="forgot-password.html" class="form-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <div class="auth-divider">
+          <span>or login with</span>
+        </div>
+        <div class="social-login">
+          <button class="btn btn-outline">
+            <i class="fab fa-google"></i> Google
+          </button>
+          <button class="btn btn-outline">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </button>
+        </div>
+        <div class="auth-switch">
+          Don't have an account? <a href="#" id="switchToRegister">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeRegisterModal">&times;</span>
+      <h3 class="modal-title">Create an Account</h3>
+      <div class="modal-body">
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="registerUsername">Username</label>
+            <input type="text" id="registerUsername" class="form-control" placeholder="Choose a username" required>
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" class="form-control" placeholder="Your email address" required>
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" class="form-control" placeholder="Create a password" required>
+          </div>
+          <div class="form-group">
+            <label for="registerConfirm">Confirm Password</label>
+            <input type="password" id="registerConfirm" class="form-control" placeholder="Confirm your password" required>
+          </div>
+          <div class="form-remember">
+            <input type="checkbox" id="agreeTerms" required>
+            <label for="agreeTerms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <div class="auth-divider">
+          <span>or register with</span>
+        </div>
+        <div class="social-login">
+          <button class="btn btn-outline">
+            <i class="fab fa-google"></i> Google
+          </button>
+          <button class="btn btn-outline">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </button>
+        </div>
+        <div class="auth-switch">
+          Already have an account? <a href="#" id="switchToLogin">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Notification message here</span>
+  </div>
+  
+  <!-- Instagram Fallback Button -->
+  <button id="instagramFallbackButton" onclick="window.open(window.location.href, '_blank')">
+    Open in Browser
+  </button>
+    
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
+<!-- 
+âš  This code is protected by GitHub Pages âš 
+Copyright Â© 2025. All rights reserved.
+Any attempt to steal or copy this code will result in immediate suspension through our copyright protection system.
+Your IP address has been logged for security purposes.
+-->
+
+<!-- 
+âš  Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ù…Ø­Ù…ÙŠ Ø¨ÙˆØ§Ø³Ø·Ø© GitHub Pages âš 
+Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2025.
+Ø£ÙŠ Ù…Ø­Ø§ÙˆÙ„Ø© Ù„Ø³Ø±Ù‚Ø© Ø£Ùˆ Ù†Ø³Ø® Ù‡Ø°Ø§ Ø§Ù„ÙƒÙˆØ¯ Ø³ØªØ¤Ø¯ÙŠ Ø¥Ù„Ù‰ Ø§Ù„Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ÙÙˆØ±ÙŠ Ø¹Ø¨Ø± Ù†Ø¸Ø§Ù… Ø­Ù…Ø§ÙŠØ© Ø­Ù‚ÙˆÙ‚ Ø§Ù„Ù†Ø´Ø±.
+ØªÙ… ØªØ³Ø¬ÙŠÙ„ Ø¹Ù†ÙˆØ§Ù† IP Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ø£ØºØ±Ø§Ø¶ Ø£Ù…Ù†ÙŠØ©.
+-->
+
+
+
+
+
+
+
+
